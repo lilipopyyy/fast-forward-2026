@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fast-Forward-2026</title>
+
+    <link rel="stylesheet" href="from-css/style.css">
+</head>
+
+<body>
+
+    <form id="formDaftar" novalidate>
+
+        <h1>Form Pendaftaran Fast-Forward-2026</h1>
+
+        <div id="hasil"></div>
+
+        <!-- Nama -->
+        <label for="nama">
+            Nama Siswa
+        </label>
+
+        <input
+            type="text"
+            id="nama"
+            name="nama_siswa"
+            placeholder="Masukkan Nama"
+        >
+
+        <small id="errorNama" class="error"></small>
+
+        <br><br>
+
+
+        <!-- Email -->
+        <label for="email">
+            Email Siswa
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email_siswa"
+            placeholder="Masukkan Email"
+        >
+
+        <small id="errorEmail" class="error"></small>
+
+        <br><br>
+
+
+        <!-- Kelas -->
+        <label for="kelas">
+            Pilih Kelas
+        </label>
+
+        <select name="kelas" id="kelas" required>
+
+            <option value="X PPLG 1">X PPLG 1</option>
+            <option value="X PPLG 2">X PPLG 2</option>
+            <option value="X PPLG 3">X PPLG 3</option>
+
+            <option value="X TJKT 1">X TJKT 1</option>
+            <option value="X TJKT 2">X TJKT 2</option>
+            <option value="X TJKT 3">X TJKT 3</option>
+            <option value="X TJKT 4">X TJKT 4</option>
+
+            <option value="X BP">X BP</option>
+
+            <option value="XI RPL 1">XI RPL 1</option>
+            <option value="XI RPL 2">XI RPL 2</option>
+            <option value="XI RPL 3">XI RPL 3</option>
+
+            <option value="XI TKJ 1">XI TKJ 1</option>
+            <option value="XI TKJ 2">XI TKJ 2</option>
+            <option value="XI TKJ 3">XI TKJ 3</option>
+
+            <option value="XI TJA">XI TJA</option>
+            <option value="XI PF">XI PF</option>
+
+            <option value="XII RPL 1">XII RPL 1</option>
+            <option value="XII RPL 2">XII RPL 2</option>
+            <option value="XII RPL 3">XII RPL 3</option>
+
+            <option value="XII TKJ 1">XII TKJ 1</option>
+            <option value="XII TKJ 2">XII TKJ 2</option>
+            <option value="XII TKJ 3">XII TKJ 3</option>
+
+            <option value="XII TJA 1">XII TJA 1</option>
+            <option value="XII TJA 2">XII TJA 2</option>
+
+            <option value="XII PF 1">XII PF 1</option>
+            <option value="XII PF 2">XII PF 2</option>
+
+        </select>
+
+        <small id="errorKelas" class="error"></small>
+
+        <br><br>
+
+
+        <!-- Jurusan -->
+        <label for="jurusan">
+            Jurusan
+        </label>
+
+        <select name="jurusan" id="jurusan" required>
+
+            <option value="RPL">RPL</option>
+            <option value="TKJ">TKJ</option>
+            <option value="TJA">TJA</option>
+            <option value="PF">PF</option>
+
+        </select>
+
+        <small id="errorJurusan" class="error"></small>
+
+        <br><br>
+
+
+        <!-- Kegiatan -->
+        <label for="kegiatan">
+            Kegiatan
+        </label>
+
+        <input
+            type="text"
+            id="kegiatan"
+            name="kegiatan_siswa"
+            placeholder="Masukkan Kegiatan"
+        >
+
+        <small id="errorKegiatan" class="error"></small>
+
+        <br><br>
+
+
+        <!-- Persetujuan -->
+        <div class="checkbox-group">
+
+            <input
+                type="checkbox"
+                id="setuju"
+            >
+
+            <label for="setuju">
+                Saya Menyetujui Syarat & Ketentuan
+            </label>
+
+            <small id="errorSetuju" class="error"></small>
+
+            <br><br>
+
+            <button
+                type="submit"
+                id="btnDaftar"
+                disabled
+            >
+                Daftar Sekarang
+            </button>
+
+        </div>
+
+    </form>
+
+    <script src="from-js/script.js"></script>
+
+</body>
+</html>
+

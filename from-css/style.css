@@ -1,0 +1,152 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff4b8;
+    margin: 0;
+    padding: 40px 15px;
+}
+
+/* Form */
+form {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    background-color: white;
+    border: 2px solid #e5c23b;
+    border-radius: 10px;
+}
+
+/* Judul */
+h1 {
+    text-align: center;
+    color: #806600;
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #4d4d4d;
+    font-weight: bold;
+}
+
+/* Input dan Select */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+
+    border: 1px solid #c9aa24;
+    border-radius: 5px;
+
+    background-color: #fffdf0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Saat diklik */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #d6ad00;
+    background-color: white;
+}
+
+/* Checkbox */
+.checkbox-group {
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+.checkbox-group input {
+    accent-color: #d6ad00;
+}
+
+.checkbox-group label {
+    display: inline;
+    margin-left: 5px;
+    font-weight: normal;
+    color: #555;
+}
+
+/* Tombol */
+button {
+    width: 100%;
+    padding: 11px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #d6ad00;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* Tombol saat mouse diarahkan */
+button:hover:not(:disabled) {
+    background-color: #b89400;
+}
+
+/* Tombol tidak aktif */
+button:disabled {
+    background-color: #cfcfcf;
+    color: #777;
+    cursor: not-allowed;
+}
+
+/* Hasil pendaftaran */
+#hasil {
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#hasil.success {
+    color: #4d6b00;
+    background-color: #f4f8d8;
+    border: 1px solid #cbd78c;
+    border-radius: 5px;
+}
+
+/* Pesan error */
+.error {
+    display: block;
+    margin-top: 4px;
+    color: #c0392b;
+    font-size: 12px;
+}
+
+/* Input yang salah */
+.input-error {
+    border: 2px solid #c0392b !important;
+    background-color: #fff0f0;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+}
