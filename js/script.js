@@ -89,3 +89,7 @@ form.addEventListener('submit', function (e) {
 });
 
 console.log(localStorage.getItem('nama_siswa'));
+// Mengaktifkan tombol daftar ketika checkbox persetujuan dicentang
+setuju.addEventListener('change', function () {
+    btnDaftar.disabled = !setuju.checked;
+});
