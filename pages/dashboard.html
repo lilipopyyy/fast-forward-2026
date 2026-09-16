@@ -1,15 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-<!DOCTYPE html>
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -17,39 +7,47 @@
 
     <title>Dashboard Peserta</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
 <body>
+  <div class="dashboard-wrap">
 
-    <div class="dashboard">
+        <div class="dashboard-header">
+            <p class="judul-kecil">FAST-FORWARD-2026</p>
+            <h1>Dashboard Peserta</h1>
+        </div>
 
-        <h1>Dashboard Peserta</h1>
+        <div class="table-card">
 
-        <p>Data Peserta Fast Forward 2026</p>
+            <div class="table-card-top">
+                <h2>Daftar Peserta</h2>
+            </div>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nama</th>
-                    <th>Email</th>
-                    <th>Kelas</th>
-                    <th>Jurusan</th>
-                    <th>Kegiatan</th>
-                    <th>Status</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
+            <p id="pesanKosong">Belum ada peserta terdaftar.</p>
 
-            <tbody id="tabelPeserta">
-                <!-- Data peserta akan ditampilkan di sini -->
-            </tbody>
-        </table>
+            <table id="tabel-peserta">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>Kelas</th>
+                        <th>Jurusan</th>
+                        <th>Kegiatan</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelPeserta">
+                    <!-- Data peserta akan muncul di sini -->
+                </tbody>
+            </table>
+
+        </div>
 
     </div>
-
-    <script src="js/script.js"></script>
-
 </body>
 </html>
+<script src="../js/script.js"></script>

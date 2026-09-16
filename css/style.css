@@ -1,91 +1,412 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff4b8;
     margin: 0;
     padding: 40px 15px;
+    font-family: Arial, sans-serif;
+    background-color: #fff4b8;
+    color: #4d4d4d;
 }
 
-/* Form */
+
+/* =========================================
+   FORM PENDAFTARAN
+========================================= */
+
 form {
     width: 90%;
-    max-width: 500px;
-    margin: auto;
-    padding: 25px;
+    max-width: 750px;
+    margin: 0 auto;
+
+    padding: 35px 40px;
+
     background-color: white;
     border: 2px solid #e5c23b;
-    border-radius: 10px;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* Judul */
-h1 {
+form h1 {
     text-align: center;
     color: #806600;
-    font-size: 25px;
+
+    font-size: 32px;
+
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 45px;
 }
 
-/* Label */
-label {
+form label {
     display: block;
-    margin-bottom: 6px;
+
+    margin-bottom: 8px;
+
     color: #4d4d4d;
+
     font-weight: bold;
+    font-size: 19px;
 }
 
-/* Input dan Select */
-input[type="text"],
-input[type="email"],
-select,
-textarea {
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
     width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
+
+    padding: 14px;
+
+    margin-bottom: 30px;
 
     border: 1px solid #c9aa24;
-    border-radius: 5px;
+    border-radius: 8px;
 
     background-color: #fffdf0;
+
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 17px;
 }
 
-/* Saat diklik */
-input:focus,
-select:focus,
-textarea:focus {
+form input:focus,
+form select:focus,
+form textarea:focus {
     outline: none;
+
     border: 2px solid #d6ad00;
+
     background-color: white;
 }
 
-/* Checkbox */
+
+/* =========================================
+   CHECKBOX FORM
+========================================= */
+
 .checkbox-group {
-    margin-top: 10px;
-    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 5px 0 25px;
 }
 
-.checkbox-group input {
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+
+    margin: 0;
+
     accent-color: #d6ad00;
+
+    cursor: pointer;
 }
 
 .checkbox-group label {
     display: inline;
-    margin-left: 5px;
+
+    margin: 0;
+
+    font-size: 17px;
     font-weight: normal;
-    color: #555;
+
+    cursor: pointer;
 }
 
-/* Tombol */
-button {
+
+/* =========================================
+   TOMBOL FORM
+========================================= */
+
+form button {
     width: 100%;
-    padding: 11px;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #d6ad00;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+form button:hover:not(:disabled) {
+    background-color: #b89400;
+}
+
+form button:disabled {
+    background-color: #cfcfcf;
+    color: #777;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error {
+    display: block;
+
+    margin-top: -20px;
+    margin-bottom: 20px;
+
+    color: #c0392b;
+    font-size: 13px;
+}
+
+.input-error {
+    border: 2px solid #c0392b !important;
+    background-color: #fff0f0 !important;
+}
+
+
+/* =========================================
+   HASIL
+========================================= */
+
+#hasil {
+    margin-bottom: 15px;
+    padding: 10px;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+#hasil.success {
+    color: #4d6b00;
+
+    background-color: #f4f8d8;
+
+    border: 1px solid #cbd78c;
+
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER DASHBOARD
+========================================= */
+
+.dashboard-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+
+    padding: 25px 35px;
+
+    border: 2px solid #e5c23b;
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-header h1 {
+    margin: 0;
+
+    color: #806600;
+
+    font-size: 30px;
+
+    text-align: right;
+}
+
+.dashboard-header p {
+    margin: 5px 0 0;
+
+    color: #777;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   TOMBOL KEMBALI
+========================================= */
+
+.btn-kembali {
+    display: inline-block;
+
+    padding: 11px 18px;
+
+    background-color: #d6ad00;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.btn-kembali:hover {
+    background-color: #b89400;
+}
+
+
+/* =========================================
+   STAT CARD
+========================================= */
+
+.stat-card {
+    background-color: white;
+
+    border: 2px solid #e5c23b;
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    width: 220px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card p {
+    margin: 0;
+
+    color: #666;
+
+    font-weight: bold;
+}
+
+.stat-card h2 {
+    margin: 8px 0 0;
+
+    color: #806600;
+
+    font-size: 30px;
+}
+
+
+/* =========================================
+   TABEL DASHBOARD
+========================================= */
+
+.table-container {
+    background-color: white;
+
+    border: 2px solid #e5c23b;
+    border-radius: 10px;
+
+    padding: 20px;
+
+    overflow-x: auto;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.table-container h2 {
+    color: #806600;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+/* TABEL */
+
+.table-container table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+}
+
+
+/* HEADER TABEL */
+
+.table-container th {
+    background-color: #d6ad00;
+
+    color: white;
+
+    padding: 12px;
+
+    text-align: left;
+
+    font-size: 16px;
+}
+
+
+/* ISI TABEL */
+
+.table-container td {
+    padding: 12px;
+
+    border-bottom: 1px solid #ddd;
+
+    color: #444;
+
+    font-size: 16px;
+}
+
+
+/* BARIS GENAP */
+
+.table-container tr:nth-child(even) {
+    background-color: #fffdf0;
+}
+
+
+/* HOVER */
+
+.table-container tr:hover {
+    background-color: #fff4b8;
+}
+
+
+/* =========================================
+   TOMBOL EDIT & HAPUS
+========================================= */
+
+.table-container button {
+    width: auto;
+
+    padding: 9px 16px;
+
+    margin: 2px;
 
     border: none;
     border-radius: 5px;
 
     background-color: #d6ad00;
+
     color: white;
 
     font-size: 15px;
@@ -94,59 +415,257 @@ button {
     cursor: pointer;
 }
 
-/* Tombol saat mouse diarahkan */
-button:hover:not(:disabled) {
+.table-container button:hover {
     background-color: #b89400;
 }
 
-/* Tombol tidak aktif */
-button:disabled {
-    background-color: #cfcfcf;
-    color: #777;
-    cursor: not-allowed;
-}
 
-/* Hasil pendaftaran */
-#hasil {
-    margin-bottom: 15px;
-    padding: 10px;
+/* =========================================
+   DATA KOSONG
+========================================= */
+
+.data-kosong {
     text-align: center;
-    font-weight: bold;
+
+    padding: 30px;
+
+    color: #777;
 }
 
-#hasil.success {
-    color: #4d6b00;
-    background-color: #f4f8d8;
-    border: 1px solid #cbd78c;
-    border-radius: 5px;
-}
 
-/* Pesan error */
-.error {
-    display: block;
-    margin-top: 4px;
-    color: #c0392b;
-    font-size: 12px;
-}
+/* =========================================
+   RESPONSIVE
+========================================= */
 
-/* Input yang salah */
-.input-error {
-    border: 2px solid #c0392b !important;
-    background-color: #fff0f0;
-}
+@media (max-width: 700px) {
 
-/* Tampilan HP */
-@media (max-width: 600px) {
     body {
         padding: 20px 10px;
     }
 
+    /* FORM */
+
     form {
         width: 100%;
+
+        padding: 25px 20px;
+    }
+
+    form h1 {
+        font-size: 24px;
+
+        margin-bottom: 35px;
+    }
+
+    form label {
+        font-size: 17px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form select,
+    form textarea {
+        font-size: 16px;
+
+        padding: 12px;
+
+        margin-bottom: 25px;
+    }
+}
+
+    /* DASHBOARD */
+
+    /* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard-wrap {
+    width: 95%;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+
+/* HEADER */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 35px;
+
+    background-color: white;
+
+    border: 2px solid #e5c23b;
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-header h1 {
+    margin: 0;
+
+    color: #806600;
+    font-size: 30px;
+}
+
+.judul-kecil {
+    margin: 0;
+
+    color: #777;
+    font-size: 18px;
+}
+
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+.table-card {
+    background-color: white;
+
+    border: 2px solid #e5c23b;
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    overflow-x: auto;
+}
+
+.table-card-top h2 {
+    margin: 0 0 20px;
+
+    color: #806600;
+    font-size: 28px;
+}
+
+
+/* =========================================
+   PESAN KOSONG
+========================================= */
+
+#pesanKosong {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #777;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   TABEL
+========================================= */
+
+#tabel-peserta {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+}
+
+
+/* HEADER TABEL */
+
+#tabel-peserta th {
+    padding: 14px;
+
+    background-color: #d6ad00;
+
+    color: white;
+
+    text-align: left;
+
+    font-size: 15px;
+}
+
+
+/* DATA TABEL */
+
+#tabel-peserta td {
+    padding: 14px;
+
+    border-bottom: 1px solid #ddd;
+
+    color: #444;
+
+    font-size: 15px;
+}
+
+
+/* BARIS GENAP */
+
+#tabel-peserta tbody tr:nth-child(even) {
+    background-color: #fffdf0;
+}
+
+
+/* HOVER */
+
+#tabel-peserta tbody tr:hover {
+    background-color: #fff4b8;
+}
+
+
+/* =========================================
+   TOMBOL AKSI
+========================================= */
+
+#tabel-peserta button {
+    padding: 9px 14px;
+
+    margin: 2px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #d6ad00;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#tabel-peserta button:hover {
+    background-color: #b89400;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .dashboard-wrap {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+
         padding: 20px;
     }
 
-    h1 {
-        font-size: 21px;
+    .dashboard-header h1 {
+        font-size: 25px;
+    }
+
+    .table-card {
+        padding: 15px;
     }
 }
