@@ -11,23 +11,41 @@
 </head>
 
 <body>
-  <div class="dashboard-wrap">
+ <div class="dashboard-wrap">
 
         <div class="dashboard-header">
-            <p class="judul-kecil">FAST-FORWARD-2026</p>
-            <h1>Dashboard Peserta</h1>
+
+            <p class="judul-kecil">
+                FAST-FORWARD-2026
+            </p>
+
+            <h1>
+                Dashboard Peserta
+            </h1>
+
         </div>
+
 
         <div class="table-card">
 
             <div class="table-card-top">
-                <h2>Daftar Peserta</h2>
+
+                <h2>
+                    Daftar Peserta
+                </h2>
+
             </div>
 
-            <p id="pesanKosong">Belum ada peserta terdaftar.</p>
+
+            <p id="pesanKosong">
+                Belum ada peserta terdaftar.
+            </p>
+
 
             <table id="tabel-peserta">
+
                 <thead>
+
                     <tr>
                         <th>No</th>
                         <th>Nama</th>
@@ -38,16 +56,206 @@
                         <th>Status</th>
                         <th>Aksi</th>
                     </tr>
+
                 </thead>
 
+
                 <tbody id="tabelPeserta">
-                    <!-- Data peserta akan muncul di sini -->
+
                 </tbody>
+
             </table>
 
         </div>
 
     </div>
+
+
+    <!-- =========================
+         POPUP EDIT
+         ========================= -->
+
+    <div id="popupEdit" class="popup">
+
+        <div class="popup-box">
+
+            <h2>
+                Edit Data Peserta
+            </h2>
+
+
+            <label for="editNama">
+                Nama Siswa
+            </label>
+
+            <input
+                type="text"
+                id="editNama"
+            >
+
+
+            <label for="editEmail">
+                Email Siswa
+            </label>
+
+            <input
+                type="email"
+                id="editEmail"
+            >
+
+
+            <label for="editKelas">
+                Kelas
+            </label>
+
+            <select id="editKelas">
+
+                <option value="X PPLG 1">X PPLG 1</option>
+                <option value="X PPLG 2">X PPLG 2</option>
+                <option value="X PPLG 3">X PPLG 3</option>
+
+                <option value="X TJKT 1">X TJKT 1</option>
+                <option value="X TJKT 2">X TJKT 2</option>
+                <option value="X TJKT 3">X TJKT 3</option>
+                <option value="X TJKT 4">X TJKT 4</option>
+
+                <option value="X BP">X BP</option>
+
+                <option value="XI RPL 1">XI RPL 1</option>
+                <option value="XI RPL 2">XI RPL 2</option>
+                <option value="XI RPL 3">XI RPL 3</option>
+
+                <option value="XI TKJ 1">XI TKJ 1</option>
+                <option value="XI TKJ 2">XI TKJ 2</option>
+                <option value="XI TKJ 3">XI TKJ 3</option>
+
+                <option value="XI TJA">XI TJA</option>
+                <option value="XI PF">XI PF</option>
+
+                <option value="XII RPL 1">XII RPL 1</option>
+                <option value="XII RPL 2">XII RPL 2</option>
+                <option value="XII RPL 3">XII RPL 3</option>
+
+                <option value="XII TKJ 1">XII TKJ 1</option>
+                <option value="XII TKJ 2">XII TKJ 2</option>
+                <option value="XII TKJ 3">XII TKJ 3</option>
+
+                <option value="XII TJA 1">XII TJA 1</option>
+                <option value="XII TJA 2">XII TJA 2</option>
+
+                <option value="XII PF 1">XII PF 1</option>
+                <option value="XII PF 2">XII PF 2</option>
+
+            </select>
+
+
+            <label for="editJurusan">
+                Jurusan
+            </label>
+
+            <select id="editJurusan">
+
+                <option value="RPL">RPL</option>
+                <option value="TKJ">TKJ</option>
+                <option value="TJA">TJA</option>
+                <option value="PF">PF</option>
+
+            </select>
+
+
+            <label for="editKegiatan">
+                Kegiatan
+            </label>
+
+            <input
+                type="text"
+                id="editKegiatan"
+            >
+
+
+            <label for="editStatus">
+                Status
+            </label>
+
+            <select id="editStatus">
+
+                <option value="Pending">
+                    Pending
+                </option>
+
+                <option value="Approve">
+                    Approve
+                </option>
+
+                <option value="Reject">
+                    Reject
+                </option>
+
+            </select>
+
+
+            <div class="popup-button">
+
+                <button
+                    type="button"
+                    id="btnSimpanEdit"
+                >
+                    Simpan
+                </button>
+
+                <button
+                    type="button"
+                    id="btnBatalEdit"
+                >
+                    Batal
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         POPUP HAPUS
+         ========================= -->
+
+    <div id="popupHapus" class="popup">
+
+        <div class="popup-box">
+
+            <h2>
+                Hapus Data
+            </h2>
+
+            <p>
+                Apakah kamu yakin ingin menghapus
+                data peserta ini?
+            </p>
+
+
+            <div class="popup-button">
+
+                <button
+                    type="button"
+                    id="btnOkeHapus"
+                >
+                    Oke
+                </button>
+
+                <button
+                    type="button"
+                    id="btnBatalHapus"
+                >
+                    Batal
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="../js/script.js"></script>
 </body>
 </html>
-<script src="../js/script.js"></script>
